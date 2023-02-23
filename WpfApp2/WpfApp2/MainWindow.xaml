@@ -1,0 +1,43 @@
+﻿<Window x:Class="WpfApp2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/1663315408_5-phonoteka-org-p-gachimuchi-art-vkontakte-11.jpg"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="21*"/>
+            <RowDefinition Height="159*"/>
+            <RowDefinition Height="37*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="39*"/>
+            <ColumnDefinition Width="41*"/>
+        </Grid.ColumnDefinitions>
+        <Button Grid.Column="0" Content="удалить" Margin="10,0,0,10" Grid.Row="2" Height="20" VerticalAlignment="Bottom" Click="knopkaudaleniya" Background="#FFED6153"/>
+        <Button Grid.Column="1" Grid.ColumnSpan="1" Content="Создать" Grid.Row="2" Margin="0,0,10,10" Height="20" VerticalAlignment="Bottom" Click="CreateButtonClick" HorizontalAlignment="Right" Width="195" Background="#FFD116E6"/>
+
+        <ListBox x:Name="ZAMETKI" Margin="0,159,10,69" SelectionChanged="ChangeSelect" Grid.Row="1" Background="#FFA29292" />
+        <DatePicker x:Name="DATA" Margin="10,10,0,5" Background="#FFB37373" Foreground="#FFE02525"  >
+            <DatePicker.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,0" StartPoint="0.5,1">
+                    <GradientStop Color="#FFA3AEB9"/>
+                    <GradientStop Color="#FF8399A9" Offset="0.375"/>
+                    <GradientStop Color="#FF718597" Offset="0.375"/>
+                    <GradientStop Color="#FF2771A7" Offset="1"/>
+                </LinearGradientBrush>
+            </DatePicker.BorderBrush>
+        </DatePicker>
+        <TextBlock Grid.Column="1" Margin="10,10,10,0" Grid.Row="1" TextWrapping="Wrap" Text="Название" VerticalAlignment="Top" TextAlignment="Center" Height="16" Background="#FF0E87C7" FontFamily="Bahnschrift SemiBold"/>
+        <TextBlock Grid.Column="1" Margin="11,82,9,0" Grid.Row="1" TextWrapping="Wrap" Text="Описание" VerticalAlignment="Top" TextAlignment="Center" Height="16" Background="#FF1E51CC" FontFamily="Lucida Sans Unicode"/>
+        <TextBox x:Name="NAZVANIE" Grid.Column="1" Margin="10,45,9,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="18"/>
+        <TextBox x:Name="OPISANIE" Grid.Column="1" Margin="5,119,14,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="18"/>
+    </Grid>
+</Window>
